@@ -15,7 +15,70 @@
     <!-- font-awesome icon CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="font_lato">
+<body class="font_lato text-black_color">
+    <!-- header section -->
+    <header class="flex flex-col items-center justify-center sm:mx-8 sm:my-2 md:mx-12 md:my-4 lg:mx-24 lg:my-8">
+        <!-- header navbar section -->
+        <div class="navbar mb-4 lg:mb-8">
+            <div class="navbar-start">
+              <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost md:hidden">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul
+                    tabindex="0"
+                    class="menu menu-lg backdrop-blur-xl dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <a href="index.html" class="btn btn-ghost text-2xl font-black">
+                    <img src="images/logo.webp" alt="brand logo image">
+                    Peddy
+                </a>
+            </div>
 
+            <div class="navbar-center hidden md:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="navbar-end">
+                <div class="btn btn-ghost btn-circle avatar" role="button">
+                    <img src="images/icons/login.svg" alt="login/signup button">
+                </div>
+            </div>
+        </div>
+
+        <!-- header card section -->
+        <div class="card md:w-11/12 lg:w-2/3">
+            <div class="card-body items-center text-center">
+              <h3><span class="text-xl font-bold text-shade_black_color2">Bringing Families Together</span> ❤️‍🔥</h3>
+              <h1 class="card-title sm:text-6xl md:text-5xl lg:text-6xl font-black py-5">Your Path to Adoption Starts Here</h1>
+              <p>A program that helps individuals and families adopt pets from shelters, offering guidance on choosing the right pet, understanding responsibilities, and preparing for a smooth transition. It simplifies the adoption process and encourages giving animals in need a loving home.</p>
+              <div class="card-actions mt-6">
+                <button class="btn bg-green_color text-white_color font-bold">View More</button>
+              </div>
+            </div>
+            <figure class="px-10 pt-10">
+                <img src="images/pet.webp" alt="pets image"/>
+              </figure>
+          </div>
+    </header>
 </body>
 </html>
