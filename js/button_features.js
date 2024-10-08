@@ -3,7 +3,6 @@ const createPetButton = (categories) => {
     const petBtnContainer = document.getElementById("pet_btn_container");
     categories.forEach((item) => {
         const div = document.createElement("div");
-        console.log(item.id)
         div.innerHTML = `
             <button id="btn_${item.id}" onclick="loadButtonRelatedCard(${item.id})" class="btn sm:h-20 sm:w-36 md:w-48 lg:h-24 lg:w-60">
                 <img class="sm:h-8 sm:w-8 md:h-10 md:w-10 lg:h-14 lg:w-14" src=${item.category_icon} alt="${item.category} icon image">

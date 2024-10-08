@@ -26,6 +26,8 @@ const displayPetsData = (pets) => {
         `;
         return;
     }
+
+    // Loop through each pet object and create a card for each one
     pets.forEach(pet => {
         // Create a new div element for each post
         const petCard = document.createElement("div");
@@ -61,7 +63,7 @@ const displayPetsData = (pets) => {
                     <div class="card-actions flex">
                         <button class="btn px-4 py-2 border border-green_border_color bg-white_color rounded-md"><img src="images/icons/like.svg" alt="like icon image"></button>
                         <button class="btn px-5 py-2 text-sm font-bold text-green_color border border-green_border_color bg-white_color rounded-md">Adopt</button>
-                        <button class="btn px-5 py-2 text-sm font-bold text-green_color border border-green_border_color bg-white_color rounded-md">Details</button>
+                        <button onclick="getPetData(${pet.petId})" class="btn px-5 py-2 text-sm font-bold text-green_color border border-green_border_color bg-white_color rounded-md">Details</button>
                     </div>
                 </div>
             </div>
