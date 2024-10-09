@@ -1,11 +1,17 @@
-async function showSpinner(){
-    const spinner = document.getElementById('pet_container');
+function spinner(){
+    // Show the spinner animation
+    const petContainer = document.getElementById("pet_container");
 
-    const [data] = await Promise.all([
-        fetch('https://api.example.com/data').then(res => res.json()),
-        new Promise(r => setTimeout(r, 2000))
-    ]);
+    petContainer.classList.remove("grid");
+    petContainer.innerHTML = `
+        <div class="w-2/5 h-auto mx-auto">
+            <span class="w-1/2 h-36 loading loading-dots loading-lg"></span>
+            <p class="text-5xl font-bold">Loading...</p>
+        </div>
+    `;
 
-    spinner.classList.add('hidden');
-    document.getElementById('dataContainer').textContent = JSON.stringify(data);
+    // Hide the spinner after 2 sec (2000 milliseconds)
+    setTimeout(() => {
+        document.getElementById('loadingContainer').innerHTML = ''; // Remove spinner after 2 minutes
+    }, 2000); // 2 seconds = 2000
 }

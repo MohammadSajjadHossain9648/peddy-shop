@@ -16,7 +16,10 @@ const createPetButton = (categories) => {
 
 //after click adopt category button show button related cards which display in deal section
 const loadButtonRelatedCard = (id) => {
-    //step 1: give the button related all pets data
+    //step 1: show the spinner animation
+    spinner();
+
+    //step 2: give the button related all pets data
     let url = "";
     if(id === 1){
         url = "https://openapi.programming-hero.com/api/peddy/category/cat";
@@ -30,12 +33,13 @@ const loadButtonRelatedCard = (id) => {
     else{
         url = "https://openapi.programming-hero.com/api/peddy/category/bird";
     }
+
     fetch(url)
     .then((res) => res.json())
     .then((data) => displayPetsData(data.data))
     .catch((error) => console.log('data load error', error));
 
 
-    //step 2: active button style for clicked one of pets button categories
+    //step 3: active button style for clicked one of pets button categories
     activeButtonStyle(id);
 }

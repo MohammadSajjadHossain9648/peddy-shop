@@ -9,7 +9,7 @@ const loadCategories = () => {
 loadCategories();
 
 
-//display pets data in deal section
+//display all pets data in deal section
 const loadPetsData = () => {
     fetch(`https://openapi.programming-hero.com/api/peddy/pets`)
     .then((res) => res.json())
@@ -20,7 +20,10 @@ const loadPetsData = () => {
 loadPetsData();
 
 
-
+// Load donation content by default when the page loads
+window.addEventListener('DOMContentLoaded', () => {
+    spinner();
+});
 
 
 //get pet data by id in deal section
