@@ -107,7 +107,7 @@
                 <p class="text-xl font-black">Best Deal For you</p>
             </div>
             <div class="flex-none">
-                <button class="btn border-none bg-green_color text-white_color font-bold py-3 px-6">Sort by Price</button>
+                <button onclick="displayPetsBySortingPrice()" class="btn border-none bg-green_color text-white_color font-bold py-3 px-6">Sort by Price</button>
             </div>
         </div>
 
@@ -120,25 +120,19 @@
 
 
             <!-- pet image like container -->
-            <div id="pet_image_container" class="w-1/5 p-4 border border-black_border_color rounded-lg grid grid-cols-2 gap-4">
-                <!-- single row with 2 images -->
-                <figure class="h-24 w-20 border rounded-lg">
-                    <img class="h-full w-full" src="images/pet.webp" alt="pet image">
-                </figure>
-                <figure class="h-24 w-20 border rounded-lg">
-                    <img class="h-full w-full" src="images/pet.webp" alt="pet image">
-                </figure>
-                <div class="flex gap-4 mb-4">
-
-                </div>
+            <div id="pet_image_container" class="w-1/5 p-4 border border-black_border_color rounded-lg grid sm:grid-cols-1 md:grid-cols-2 gap-4 max-w-screen-md">
 
             </div>
         </div>
     </main>
 
 
-    <!-- Open the modal using ID.showModal() method -->
-    <div id="open_modal">
+    <!-- details modal -->
+    <div id="details_modal">
+
+    </div>
+    <!-- success adopt modal -->
+    <div id="adopt_modal">
 
     </div>
 
@@ -188,5 +182,7 @@
     <script src="js/button_features.js"></script>
     <script src="js/button_active_style.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/display_pets_image.js"></script>
+    <script src="js/timer.js"></script>
 </body>
 </html>
