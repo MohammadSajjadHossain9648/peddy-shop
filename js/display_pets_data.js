@@ -2,7 +2,7 @@
 const displayPetsData = (pets) => {
     const petContainer = document.getElementById("pet_container");
     petContainer.innerHTML = "";
-    petContainer.classList = "w-4/5 grid sm:grid-cols-2 lg:grid-cols-3 gap-4";
+    petContainer.classList = "w-4/5 grid sm:grid-cols-2 md:grid-cols-3 gap-4";
 
     // no data found card
     if(pets.length == 0) {
@@ -61,9 +61,9 @@ const displayPetsData = (pets) => {
                 <hr class="border-black_border_color mb-3">
 
                 <div class="card-actions flex">
-                    <button onclick="getPetImage(${pet.petId})" class="btn px-2 md:px-3 py-2 border border-green_border_color bg-white_color rounded-md"><img src="images/icons/like.svg" alt="like icon image"></button>
-                    <button id="disable_adopt_btn_${pet.petId}" onclick="getAdoptPet(${pet.petId})" class="btn px-3 md:px-4 py-2 text-sm font-bold text-green_color border border-green_border_color bg-white_color rounded-md">Adopt</button>
-                    <button onclick="getPetData(${pet.petId})" class="btn px-3 md:px-4 py-2 text-sm font-bold text-green_color border border-green_border_color bg-white_color rounded-md">Details</button>
+                    <button onclick="getPetImage(${pet.petId})" class="btn px-2 lg:px-3 py-2 border border-green_border_color bg-white_color rounded-md"><img src="images/icons/like.svg" alt="like icon image"></button>
+                    <button id="disable_adopt_btn_${pet.petId}" onclick="getAdoptPet(${pet.petId})" class="btn px-3 md:px-2 lg:px-4 py-2 text-sm font-bold text-green_color border border-green_border_color bg-white_color rounded-md">Adopt</button>
+                    <button onclick="getPetData(${pet.petId})" class="btn px-3 md:px-2 lg:px-4 py-2 text-sm font-bold text-green_color border border-green_border_color bg-white_color rounded-md">Details</button>
                 </div>
             </div>
         `;
