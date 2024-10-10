@@ -3,6 +3,11 @@ document.getElementById('Sorting_price_btn').addEventListener('click', function 
     const petContainer = document.getElementById('pet_container');
     const cards = Array.from(petContainer.querySelectorAll('.pet_card'));
 
+    // no cards to sort, exit the function early
+    if(cards.length == 0) {
+        return;
+    }
+
     function sortCardsByPrice() {
         const sortedCards = cards.sort((a, b) => {
             const priceA = parseFloat(a.querySelector('p#pet_price').textContent.replace('Price: ', '').replace('$', '').trim());
