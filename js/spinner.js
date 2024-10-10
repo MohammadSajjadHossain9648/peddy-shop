@@ -12,6 +12,6 @@ function spinner(){
 
     // Hide the spinner after 2 sec (2000 milliseconds)
     setTimeout(() => {
-        document.getElementById('loadingContainer').innerHTML = ''; // Remove spinner after 2 minutes
+
     }, 2000); // 2 seconds = 2000
 }

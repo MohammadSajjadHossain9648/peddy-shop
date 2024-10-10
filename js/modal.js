@@ -30,7 +30,7 @@ function showModal(pet, petId){
                         </div>
                         <div class="flex">
                             <img class="mr-2 w-4" src="images/icons/price.svg" alt="price icon image">
-                            <p>Price: ${pet.price ? `${pet.price}` : 'Not mentioned'}</p>
+                            <p id="pet_price">Price: ${pet.price ? `${pet.price}$` : 'Not mentioned'}</p>
                         </div>
                     </div>
                     <div class="flex w-1/2 sm:mb-2 md:mb-0">

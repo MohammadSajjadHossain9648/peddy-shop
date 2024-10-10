@@ -20,10 +20,14 @@ const loadPetsData = () => {
 loadPetsData();
 
 
-// Load donation content by default when the page loads
+
+
+// show spinner animation in display pet data container before display all pets data when the page loads
 window.addEventListener('DOMContentLoaded', () => {
     spinner();
 });
+
+
 
 
 //get pet data by id in deal section
